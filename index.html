@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoTech - Mecânica Especializada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-wrench"></i>
+                <h1>AutoTech</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#pricing">Preços</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Mecânica Especializada e Confiável</h2>
+            <p>Oferecemos serviços de manutenção e reparo de alta qualidade para todos os tipos de veículos. Equipe técnica qualificada e equipamentos modernos.</p>
+            <div>
+                <a href="#pricing" class="btn">Ver Preços</a>
+                <a href="#contact" class="btn">Agendar Serviço</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Serviços completos para manter seu veículo em perfeitas condições</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Troca de Óleo" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Troca de Óleo</h3>
+                    <p>Troca de óleo e filtro com produtos de alta qualidade para garantir a longevidade do seu motor.</p>
+                    <div class="price">A partir de R$ 80,00</div>
+                    <a href="#pricing" class="btn">Ver Detalhes</a>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Freios" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3>Freios</h3>
+                    <p>Inspeção, reparo e substituição de pastilhas, discos e tambores de freio para sua segurança.</p>
+                    <div class="price">A partir de R$ 150,00</div>
+                    <a href="#pricing" class="btn">Ver Detalhes</a>
+                </div>
+                <div class="service-card">
+                    <img src="images/lexus-nx-gallery-ext-5-d.jpg" alt="Sistema Elétrico" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Sistema Elétrico</h3>
+                    <p>Diagnóstico e reparo de problemas elétricos, baterias, alternadores e sistemas de ignição.</p>
+                    <div class="price">A partir de R$ 120,00</div>
+                    <a href="#pricing" class="btn">Ver Detalhes</a>
+                </div>
+                <div class="service-card">
+                    <img src="images/rally.jpg" alt="Suspensão" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Suspensão</h3>
+                    <p>Alinhamento, balanceamento e reparo de amortecedores e componentes da suspensão.</p>
+                    <div class="price">A partir de R$ 200,00</div>
+                    <a href="#pricing" class="btn">Ver Detalhes</a>
+                </div>
+                <div class="service-card">
+                    <img src="images/golg5.jpg" alt="Ar Condicionado" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>Ar Condicionado</h3>
+                    <p>Manutenção, recarga e reparo de sistemas de ar condicionado automotivo.</p>
+                    <div class="price">A partir de R$ 180,00</div>
+                    <a href="#pricing" class="btn">Ver Detalhes</a>
+                </div>
+                <div class="service-card">
+                    <img src="images/manutecao.jpg" alt="Diagnóstico" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Diagnóstico</h3>
+                    <p>Diagnóstico computadorizado para identificar problemas e soluções precisas.</p>
+                    <div class="price">A partir de R$ 100,00</div>
+                    <a href="#pricing" class="btn">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tabela de Preços</h2>
+                <p>Conheça nossos pacotes e serviços com preços especiais</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Manutenção Básica</h3>
+                    <div class="price-value">R$ 199</div>
+                    <div class="price-period">por visita</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Troca de óleo e filtro</li>
+                        <li><i class="fas fa-check"></i> Verificação de freios</li>
+                        <li><i class="fas fa-check"></i> Checagem de fluidos</li>
+                        <li><i class="fas fa-check"></i> Inspeção visual</li>
+                        <li><i class="fas fa-times"></i> Alinhamento</li>
+                        <li><i class="fas fa-times"></i> Balanceamento</li>
+                    </ul>
+                    <a href="#contact" class="btn">Agendar</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-tag">MAIS POPULAR</div>
+                    <h3>Completo</h3>
+                    <div class="price-value">R$ 399</div>
+                    <div class="price-period">por visita</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Todos os itens básicos</li>
+                        <li><i class="fas fa-check"></i> Alinhamento e balanceamento</li>
+                        <li><i class="fas fa-check"></i> Troca de filtros</li>
+                        <li><i class="fas fa-check"></i> Verificação de suspensão</li>
+                        <li><i class="fas fa-check"></i> Diagnóstico computadorizado</li>
+                        <li><i class="fas fa-check"></i> Relatório detalhado</li>
+                    </ul>
+                    <a href="#contact" class="btn">Agendar</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price-value">R$ 599</div>
+                    <div class="price-period">por visita</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Todos os itens completos</li>
+                        <li><i class="fas fa-check"></i> Troca de velas e cabos</li>
+                        <li><i class="fas fa-check"></i> Verificação do ar condicionado</li>
+                        <li><i class="fas fa-check"></i> Lubrificação de componentes</li>
+                        <li><i class="fas fa-check"></i> Garantia estendida</li>
+                        <li><i class="fas fa-check"></i> Desconto em peças</li>
+                    </ul>
+                    <a href="#contact" class="btn">Agendar</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Express</h3>
+                    <div class="price-value">R$ 99</div>
+                    <div class="price-period">por visita</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Checagem rápida</li>
+                        <li><i class="fas fa-check"></i> Verificação de óleo</li>
+                        <li><i class="fas fa-check"></i> Inspeção de pneus</li>
+                        <li><i class="fas fa-check"></i> Teste de bateria</li>
+                        <li><i class="fas fa-times"></i> Troca de peças</li>
+                        <li><i class="fas fa-times"></i> Relatório completo</li>
+                    </ul>
+                    <a href="#contact" class="btn">Agendar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Depoimentos</h2>
+                <p>O que nossos clientes dizem sobre nossos serviços</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Serviço excepcional! Meu carro nunca esteve tão bem cuidado. A equipe é profissional e atenciosa. Recomendo a todos!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Carlos Silva</h4>
+                            <p>Cliente há 3 anos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Fiz a revisão completa do meu carro e o preço foi justo. O trabalho foi feito com qualidade e dentro do prazo combinado."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Santos" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Maria Santos</h4>
+                            <p>Cliente há 2 anos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente atendimento! Diagnosticaram o problema rapidamente e fizeram o reparo com peças originais. Meu carro voltou a funcionar perfeitamente."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Roberto Oliveira" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Roberto Oliveira</h4>
+                            <p>Cliente há 1 ano</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nossa Oficina">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre a AutoTech</h2>
+                    <p>Com mais de 15 anos de experiência no mercado automotivo, a AutoTech se destaca pela qualidade dos serviços e comprometimento com a satisfação dos clientes.</p>
+                    <p>Nossa equipe é composta por mecânicos certificados e especializados em diversas marcas e modelos de veículos. Utilizamos equipamentos modernos e peças de primeira linha.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="number">15+</div>
+                            <div>Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">5000+</div>
+                            <div>Clientes Atendidos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">100%</div>
+                            <div>Garantia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para atender você. Agende uma consulta ou tire suas dúvidas.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Rua das Oficinas, 123 - Centro<br>São Paulo - SP, 01234-567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contato@autotech.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horário de Funcionamento</h4>
+                                <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Seu Telefone">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="troca-oleo">Troca de Óleo - R$ 80,00</option>
+                                <option value="freios">Freios - A partir de R$ 150,00</option>
+                                <option value="eletrico">Sistema Elétrico - A partir de R$ 120,00</option>
+                                <option value="suspensao">Suspensão - A partir de R$ 200,00</option>
+                                <option value="ar-condicionado">Ar Condicionado - A partir de R$ 180,00</option>
+                                <option value="diagnostico">Diagnóstico - A partir de R$ 100,00</option>
+                                <option value="manutencao-basica">Manutenção Básica - R$ 199,00</option>
+                                <option value="completo">Pacote Completo - R$ 399,00</option>
+                                <option value="premium">Pacote Premium - R$ 599,00</option>
+                                <option value="express">Pacote Express - R$ 99,00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2023 AutoTech Mecânica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
