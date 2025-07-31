@@ -82,7 +82,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574350940-6bb88652dc55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -409,14 +409,14 @@ nav a:hover {
     color: white;
 }
 
+.contact .section-title h2 {
+    color: white;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-}
-
-.contact .section-title h2 {
-    color: white;
 }
 
 .contact-info h3 {
@@ -463,6 +463,11 @@ nav a:hover {
     color: rgba(255,255,255,0.7);
 }
 
+.contact-form select option {
+    color: #333;
+    background-color: white;
+}
+
 .contact-form textarea {
     height: 150px;
     resize: vertical;
@@ -485,19 +490,172 @@ footer {
 
 .social-links a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(255,255,255,0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
+    text-decoration: none;
+    position: relative;
 }
 
 .social-links a:hover {
     background-color: var(--accent);
     transform: translateY(-3px);
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.close:hover {
+    color: var(--accent);
+}
+
+.options-container {
+    display: grid;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.option-card {
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.option-card.selected {
+    border-color: var(--accent);
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+.option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.option-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.option-description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.option-products {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.option-products strong {
+    color: var(--primary);
+}
+
+#selectServiceBtn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* Toast Styles */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 3000;
+    transform: translateX(200%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.error {
+    background-color: #e74c3c;
+}
+
+.toast i {
+    font-size: 1.2rem;
 }
 
 /* Responsive */
