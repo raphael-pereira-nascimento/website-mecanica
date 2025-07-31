@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'sistema-eletrico': {
                 name: 'Sistema Elétrico',
                 options: [
-                    { id: 'eletrico-diagnostico', name: 'Diagnóstico', price: 'R$ 100,00', description: 'Verificação completa do sistema elétrico com equipamentos especializados.', products: 'Scanner profissional, Multímetro digital, Teste de componentes' },
+                    { id: 'eletrico-diagnostico', name: 'Diagnóstico', price: 'R$ 120,00', description: 'Verificação completa do sistema elétrico com equipamentos especializados.', products: 'Scanner profissional, Multímetro digital, Teste de componentes' },
                     { id: 'eletrico-bateria', name: 'Bateria e Alternador', price: 'R$ 250,00', description: 'Teste e substituição de bateria e alternador com cabos premium.', products: 'Bateria Moura/Motrax, Alternador original, Cabos premium' },
                     { id: 'eletrico-completo', name: 'Sistema Completo', price: 'R$ 400,00', description: 'Diagnóstico completo e substituição de todos os componentes elétricos.', products: 'Bateria premium, Alternador Bosch, Fusiveis originais, Cabos de alta performance' }
                 ]
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'ar-condicionado': {
                 name: 'Ar Condicionado',
                 options: [
-                    { id: 'ar-basico', name: 'Recarga', price: 'R$ 150,00', description: 'Recarga de gás refrigerante R134a e verificação de vazamentos básicos.', products: 'Gás R134a premium, Filtro desidratante, Selante especial' },
+                    { id: 'ar-basico', name: 'Recarga', price: 'R$ 180,00', description: 'Recarga de gás refrigerante R134a e verificação de vazamentos básicos.', products: 'Gás R134a premium, Filtro desidratante, Selante especial' },
                     { id: 'ar-completo', name: 'Manutenção Completa', price: 'R$ 300,00', description: 'Recarga, limpeza do sistema e substituição de filtros originais.', products: 'Gás especializado, Filtros originais, Óleo compressor, Limpeza do evaporador' },
                     { id: 'ar-premium', name: 'Premium', price: 'R$ 450,00', description: 'Manutenção completa com desinfecção UV e garantia estendida.', products: 'Gás ambiental, Filtros premium, Óleo especial, Desinfetante UV, Garantia estendida' }
                 ]
