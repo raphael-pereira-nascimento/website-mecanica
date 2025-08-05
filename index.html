@@ -6,7 +6,6 @@
     <title>AutoTech - Mecânica Especializada</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <!-- Header -->
@@ -16,19 +15,24 @@
                 <i class="fas fa-wrench"></i>
                 <h1>AutoTech</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#pricing">Preços</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#pricing">Preços</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <!-- Botão de alternância de tema -->
+                <button id="themeToggle" class="btn" title="Alternar Tema">
+                    <i class="fas fa-moon"></i> <!-- Ícone inicial -->
+                </button>
+            </div>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
@@ -40,7 +44,6 @@
             </div>
         </div>
     </section>
-
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
@@ -70,7 +73,7 @@
                     <a href="#pricing" class="btn">Ver Detalhes</a>
                 </div>
                 <div class="service-card">
-                    <img src="images/lexus-nx-gallery-ext-5-d.jpg" alt="Sistema Elétrico" class="service-image">
+                    <img src="https://images.unsplash.com/photo-1580274007472-d3f106b685d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sistema Elétrico" class="service-image">
                     <div class="service-icon">
                         <i class="fas fa-battery-full"></i>
                     </div>
@@ -80,17 +83,17 @@
                     <a href="#pricing" class="btn">Ver Detalhes</a>
                 </div>
                 <div class="service-card">
-                    <img src="images/rally.jpg" alt="Suspensão" class="service-image">
+                    <img src="https://images.unsplash.com/photo-1583272595059-0e5e3f0c2e5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Suspensão" class="service-image">
                     <div class="service-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3>Suspensão</h3>
                     <p>Alinhamento, balanceamento e reparo de amortecedores e componentes da suspensão.</p>
-                    <div class="price">A partir de R$ 400,00</div>
+                    <div class="price">A partir de R$ 200,00</div>
                     <a href="#pricing" class="btn">Ver Detalhes</a>
                 </div>
                 <div class="service-card">
-                    <img src="images/golg5.jpg" alt="Ar Condicionado" class="service-image">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ar Condicionado" class="service-image">
                     <div class="service-icon">
                         <i class="fas fa-fan"></i>
                     </div>
@@ -100,7 +103,7 @@
                     <a href="#pricing" class="btn">Ver Detalhes</a>
                 </div>
                 <div class="service-card">
-                    <img src="images/manutecao.jpg" alt="Diagnóstico" class="service-image">
+                    <img src="https://images.unsplash.com/photo-1583272595059-0e5e3f0c2e5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Diagnóstico" class="service-image">
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
@@ -112,7 +115,6 @@
             </div>
         </div>
     </section>
-
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
@@ -181,7 +183,6 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
@@ -244,7 +245,6 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
@@ -274,7 +274,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -351,7 +350,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -372,13 +370,11 @@
             <p>&copy; 2023 AutoTech Mecânica. Todos os direitos reservados.</p>
         </div>
     </footer>
-
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle"></i>
         <span id="toastMessage">Mensagem enviada com sucesso!</span>
     </div>
-
     <!-- Modal para seleção de opções -->
     <div id="serviceModal" class="modal">
         <div class="modal-content">
@@ -390,8 +386,6 @@
             <button id="selectServiceBtn" class="btn" style="display: none; margin-top: 20px;">Selecionar Serviço</button>
         </div>
     </div>
-
-
     <script src="script.js"></script>
 </body>
 </html>
