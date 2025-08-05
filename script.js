@@ -314,3 +314,44 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 }); // Fim do DOMContentLoaded
+
+// Arquivo: script.js
+
+// ... (seu script.js existente) ...
+
+// Adicione este código no final do seu script.js, fora de qualquer função específica
+// mas ainda dentro do escopo global para garantir que seja carregado corretamente.
+
+// --- Alternância de Tema (Claro/Escuro) ---
+document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Verifica se o usuário já tem uma preferência salva
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+        // Atualiza o ícone do botão
+        if (themeToggle) {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Ícone para voltar ao tema claro
+        }
+    }
+
+    // Adiciona evento de clique ao botão
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
+
+            // Atualiza o ícone e salva a preferência
+            if (body.classList.contains('dark-theme')) {
+                this.innerHTML = '<i class="fas fa-sun"></i>'; // Ícone para tema claro
+                localStorage.setItem('theme', 'dark');
+            } else {
+                this.innerHTML = '<i class="fas fa-moon"></i>'; // Ícone para tema escuro
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    } else {
+        console.warn("Botão de alternância de tema (#themeToggle) não encontrado.");
+    }
+});
