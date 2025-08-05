@@ -567,7 +567,7 @@ footer {
 }
 
 .option-card {
-    border: 2px solid #eee;
+    border: 2px solid black;
     border-radius: 8px;
     padding: 20px;
     cursor: pointer;
@@ -605,21 +605,22 @@ footer {
 }
 
 .option-description {
-    color: #666;
+    color: black;
     line-height: 1.5;
     margin-bottom: 10px;
 }
 
+/* CORREÇÃO AQUI: Mudança da cor do texto dos produtos para preto */
 .option-products {
-    background-color: #f8f9fa;
+    background-color: white;
     padding: 10px;
     border-radius: 5px;
     font-size: 0.9rem;
-    color: #555;
+    color: #000000; /* Texto preto para melhor contraste e destaque */
 }
 
 .option-products strong {
-    color: var(--primary);
+    color: black;
 }
 
 #selectServiceBtn {
@@ -687,4 +688,561 @@ footer {
     .pricing-card.popular {
         transform: scale(1);
     }
+}
+#selectServiceBtn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* Toast Styles */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 3000;
+    transform: translateX(200%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.error {
+    background-color: #e74c3c;
+}
+
+.toast i {
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+}
+
+/* Arquivo: style.css */
+
+/* ... (seu CSS existente) ... */
+
+/* Adicione estas regras no final do seu style.css */
+
+/* Estilos para o botão de tema */
+#themeToggle {
+    background-color: var(--secondary);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    font-size: 1rem; /* Para garantir o tamanho do ícone */
+    min-width: 40px; /* Largura mínima para o botão */
+    min-height: 40px; /* Altura mínima para o botão */
+}
+
+#themeToggle:hover {
+    background-color: #2980b9; /* Tom mais escuro do azul para hover */
+}
+
+/* Classes para o tema escuro */
+.dark-theme {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #2d2d2d;
+    --text-primary: black;
+    --text-secondary: #bbbbbb;
+    --border-color: #444444;
+    --modal-bg: #2d2d2d;
+    --toast-bg-success: #27ae60;
+    --toast-bg-error: #e74c3c;
+}
+
+.dark-theme body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.dark-theme .services,
+.dark-theme .pricing,
+.dark-theme .about,
+.dark-theme .modal-content {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.dark-theme .modal-content {
+    background-color: var(--modal-bg);
+}
+
+.dark-theme .service-card,
+.dark-theme .pricing-card,
+.dark-theme .stat-item,
+.dark-theme .testimonial-card {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .service-card h3,
+.dark-theme .pricing-card h3,
+.dark-theme .option-name,
+.dark-theme .about-text h2 {
+    color: var(--text-primary);
+}
+
+.dark-theme .service-card p,
+.dark-theme .option-description,
+.dark-theme .option-products,
+.dark-theme .about-text p,
+.dark-theme .stat-item .number {
+    color: var(--text-secondary);
+}
+
+.dark-theme .section-title h2,
+.dark-theme .contact .section-title h2,
+.dark-theme .testimonials .section-title h2 {
+    color: var(--text-primary);
+}
+
+.dark-theme .section-title p {
+    color: var(--text-secondary);
+}
+
+.dark-theme .contact {
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(30, 30, 30, 0.9)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.dark-theme select option {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-form input,
+.dark-theme .contact-form textarea,
+.dark-theme .contact-form select {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-form input::placeholder,
+.dark-theme .contact-form textarea::placeholder,
+.dark-theme .contact-form select {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ajuste específico para o tema escuro do header */
+.dark-theme header {
+    background: linear-gradient(135deg, #0d1b2a, #0a141f);
+}
+
+/* Ajustes para o toast no tema escuro */
+.dark-theme .toast {
+    background-color: var(--toast-bg-success);
+    color: white;
+}
+
+.dark-theme .toast.error {
+    background-color: var(--toast-bg-error);
+}
+
+/* Ajustes para o modal no tema escuro */
+.dark-theme .option-card {
+    border-color: var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.dark-theme .option-card:hover {
+    border-color: var(--secondary);
+}
+
+.dark-theme .option-card.selected {
+    border-color: var(--accent);
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.dark-theme .option-name {
+    color: var(--text-primary);
+}
+
+.dark-theme .option-description,
+.dark-theme .option-products {
+    color: var(--text-secondary);
+}
+
+.dark-theme .close {
+    color: var(--text-secondary);
+}
+
+.dark-theme .close:hover {
+    color: var(--accent);
+}
+
+/* Ajustes para os links de navegação no tema escuro */
+.dark-theme nav a {
+    color: var(--text-primary);
+}
+
+.dark-theme nav a:hover {
+    color: var(--accent);
+}
+
+/* Ajustes para os ícones de features no tema escuro */
+.dark-theme .features li {
+    border-bottom-color: var(--border-color);
+}
+
+/* Ajustes para o rodapé no tema escuro */
+.dark-theme footer {
+    background-color: #0d1b2a;
+}
+
+/* Ajustes para os links sociais no tema escuro */
+.dark-theme .social-links a {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .social-links a:hover {
+    background-color: var(--accent);
+}
+
+/* Ajustes para os depoimentos no tema escuro */
+.dark-theme .testimonial-text {
+    color: var(--text-secondary);
+}
+
+.dark-theme .author-info p {
+    color: var(--accent);
+}
+
+/* Ajustes para o formulário de contato no tema escuro */
+.dark-theme .contact-info h3 {
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-item i {
+    color: var(--accent);
+}
+
+/* Ajustes para o formulário de seleção de serviço no tema escuro */
+.dark-theme #serviceOptions {
+    background-color: transparent;
+}
+
+/* Ajustes para o título do modal no tema escuro */
+.dark-theme .modal-content h2 {
+    color: var(--text-primary);
+}
+
+/* Ajustes para o preço no card de serviço no tema escuro */
+.dark-theme .price {
+    color: var(--accent);
+}
+
+/* Ajustes para o preço no card de preços no tema escuro */
+.dark-theme .price-value {
+    color: var(--accent);
+}
+
+/* Ajustes para o período de preço no card de preços no tema escuro */
+.dark-theme .price-period {
+    color: var(--text-secondary);
+}
+
+/* Ajustes para a tag popular no tema escuro */
+.dark-theme .popular-tag {
+    background: var(--accent);
+    color: white;
+}
+
+/* Estilos para o botão de tema */
+#themeToggle {
+    background-color: var(--secondary);
+    border: none;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+#themeToggle:hover {
+    background-color: #2980b9; /* Tom mais escuro do azul para hover */
+}
+
+/* Estilos para o botão de tema */
+#themeToggle {
+    background-color: var(--secondary);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    font-size: 1rem; /* Para garantir o tamanho do ícone */
+    min-width: 40px; /* Largura mínima para o botão */
+    min-height: 40px; /* Altura mínima para o botão */
+}
+
+#themeToggle:hover {
+    background-color: #2980b9; /* Tom mais escuro do azul para hover */
+}
+
+/* Classes para o tema escuro */
+.dark-theme {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #bbbbbb;
+    --border-color: #444444;
+    --modal-bg: #2d2d2d;
+    --toast-bg-success: #27ae60;
+    --toast-bg-error: #e74c3c;
+}
+
+.dark-theme body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.dark-theme .services,
+.dark-theme .pricing,
+.dark-theme .about,
+.dark-theme .modal-content {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.dark-theme .modal-content {
+    background-color: var(--modal-bg);
+}
+
+.dark-theme .service-card,
+.dark-theme .pricing-card,
+.dark-theme .stat-item,
+.dark-theme .testimonial-card {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .service-card h3,
+.dark-theme .pricing-card h3,
+.dark-theme .option-name,
+.dark-theme .about-text h2 {
+    color: var(--text-primary);
+}
+
+.dark-theme .service-card p,
+.dark-theme .option-description,
+.dark-theme .option-products,
+.dark-theme .about-text p,
+.dark-theme .stat-item .number {
+    color: var(--text-secondary);
+}
+
+.dark-theme .section-title h2,
+.dark-theme .contact .section-title h2,
+.dark-theme .testimonials .section-title h2 {
+    color: var(--text-primary);
+}
+
+.dark-theme .section-title p {
+    color: var(--text-secondary);
+}
+
+.dark-theme .contact {
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(30, 30, 30, 0.9)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.dark-theme select option {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-form input,
+.dark-theme .contact-form textarea,
+.dark-theme .contact-form select {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-form input::placeholder,
+.dark-theme .contact-form textarea::placeholder,
+.dark-theme .contact-form select {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ajuste específico para o tema escuro do header */
+.dark-theme header {
+    background: linear-gradient(135deg, #0d1b2a, #0a141f);
+}
+
+/* Ajustes para o toast no tema escuro */
+.dark-theme .toast {
+    background-color: var(--toast-bg-success);
+    color: white;
+}
+
+.dark-theme .toast.error {
+    background-color: var(--toast-bg-error);
+}
+
+/* Ajustes para o modal no tema escuro */
+.dark-theme .option-card {
+    border-color: var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.dark-theme .option-card:hover {
+    border-color: var(--secondary);
+}
+
+.dark-theme .option-card.selected {
+    border-color: var(--accent);
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.dark-theme .option-name {
+    color: var(--text-primary);
+}
+
+.dark-theme .option-description,
+.dark-theme .option-products {
+    color: var(--text-secondary);
+}
+
+.dark-theme .close {
+    color: var(--text-secondary);
+}
+
+.dark-theme .close:hover {
+    color: var(--accent);
+}
+
+/* Ajustes para os links de navegação no tema escuro */
+.dark-theme nav a {
+    color: var(--text-primary);
+}
+
+.dark-theme nav a:hover {
+    color: var(--accent);
+}
+
+/* Ajustes para os ícones de features no tema escuro */
+.dark-theme .features li {
+    border-bottom-color: var(--border-color);
+}
+
+/* Ajustes para o rodapé no tema escuro */
+.dark-theme footer {
+    background-color: #0d1b2a;
+}
+
+/* Ajustes para os links sociais no tema escuro */
+.dark-theme .social-links a {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .social-links a:hover {
+    background-color: var(--accent);
+}
+
+/* Ajustes para os depoimentos no tema escuro */
+.dark-theme .testimonial-text {
+    color: var(--text-secondary);
+}
+
+.dark-theme .author-info p {
+    color: var(--accent);
+}
+
+/* Ajustes para o formulário de contato no tema escuro */
+.dark-theme .contact-info h3 {
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-item i {
+    color: var(--accent);
+}
+
+/* Ajustes para o formulário de seleção de serviço no tema escuro */
+.dark-theme #serviceOptions {
+    background-color: transparent;
+}
+
+/* Ajustes para o título do modal no tema escuro */
+.dark-theme .modal-content h2 {
+    color: var(--text-primary);
+}
+
+/* Ajustes para o preço no card de serviço no tema escuro */
+.dark-theme .price {
+    color: var(--accent);
+}
+
+/* Ajustes para o preço no card de preços no tema escuro */
+.dark-theme .price-value {
+    color: var(--accent);
+}
+
+/* Ajustes para o período de preço no card de preços no tema escuro */
+.dark-theme .price-period {
+    color: var(--text-secondary);
+}
+
+/* Ajustes para a tag popular no tema escuro */
+.dark-theme .popular-tag {
+    background: var(--accent);
+    color: white;
 }
