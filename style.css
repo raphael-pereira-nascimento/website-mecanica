@@ -1246,3 +1246,175 @@ footer {
     background: var(--accent);
     color: white;
 }
+
+/* Estilos para o botão de tema */
+#themeToggle {
+    background-color: var(--secondary);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    min-width: 40px;
+    min-height: 40px;
+    margin-left: 15px;
+}
+
+#themeToggle:hover {
+    background-color: #2980b9; /* Tom mais escuro do azul para hover */
+}
+
+/* Classes para o tema escuro */
+.dark-theme {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #bbbbbb;
+    --border-color: #444444;
+    --modal-bg: #2d2d2d;
+}
+
+.dark-theme body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.dark-theme .services,
+.dark-theme .pricing,
+.dark-theme .about,
+.dark-theme .modal-content {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.dark-theme .service-card,
+.dark-theme .pricing-card,
+.dark-theme .stat-item,
+.dark-theme .testimonial-card {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .service-card h3,
+.dark-theme .pricing-card h3,
+.dark-theme .option-name,
+.dark-theme .about-text h2 {
+    color: var(--text-primary);
+}
+
+.dark-theme .service-card p,
+.dark-theme .option-description,
+.dark-theme .option-products,
+.dark-theme .about-text p,
+.dark-theme .stat-item .number {
+    color: var(--text-secondary);
+}
+
+.dark-theme .section-title h2,
+.dark-theme .contact .section-title h2,
+.dark-theme .testimonials .section-title h2 {
+    color: var(--text-primary);
+}
+
+.dark-theme .section-title p {
+    color: var(--text-secondary);
+}
+
+.dark-theme .contact {
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(30, 30, 30, 0.9)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.dark-theme select option {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-form input,
+.dark-theme .contact-form textarea,
+.dark-theme .contact-form select {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.dark-theme .contact-form input::placeholder,
+.dark-theme .contact-form textarea::placeholder,
+.dark-theme .contact-form select {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ajuste específico para o tema escuro do header */
+.dark-theme header {
+    background: linear-gradient(135deg, #0d1b2a, #0a141f);
+}
+
+/* Correção da cor do texto dos produtos */
+.option-products {
+    color: #000000; /* Texto preto para melhor contraste */
+}
+
+.dark-theme .option-products {
+    background-color: #2d2d2d;
+    color: #ffffff; /* Texto branco no modo escuro */
+}
+
+.dark-theme .option-products strong {
+    color: #4dabf7; /* Azul claro para "Produtos:" no modo escuro */
+}
+
+/* Correção da visibilidade do texto dos produtos no modo claro */
+.option-products {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    /* Alteração: Garantir contraste adequado no modo claro */
+    color: #000000; /* Texto preto no modo claro */
+}
+
+.option-products strong {
+    color: var(--primary); /* Mantém o azul escuro para "Produtos:" */
+}
+
+/* Ajustes específicos para o modo escuro */
+.dark-theme .option-products {
+    background-color: #2d2d2d; /* Fundo mais escuro no modo dark */
+    /* Alteração: Texto branco no modo escuro para contraste */
+    color: #ffffff; /* Texto branco no modo escuro */
+}
+
+.dark-theme .option-products strong {
+    /* Opcional: Manter a cor do título "Produtos:" no modo escuro */
+    color: #4dabf7; /* Um azul claro para destaque */
+}
+
+
+/* --- Botão de Alternância de Tema --- */
+/* (Se você já tinha adicionado isso antes, pode pular esta parte) */
+
+#themeToggle {
+    background-color: var(--secondary);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    min-width: 40px;
+    min-height: 40px;
+    margin-left: 10px; /* Espaço entre nav e o botão */
+}
+
+#themeToggle:hover {
+    background-color: #2980b9; /* Hover mais escuro */
+}

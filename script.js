@@ -355,3 +355,70 @@ document.addEventListener('DOMContentLoaded', function () {
         console.warn("Botão de alternância de tema (#themeToggle) não encontrado.");
     }
 });
+
+// --- Alternância de Tema (Claro/Escuro) ---
+document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Verifica se o usuário já tem uma preferência salva
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+        // Atualiza o ícone do botão para sol (indicando que clicar mudará para claro)
+        if (themeToggle) {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    }
+
+    // Adiciona evento de clique ao botão
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
+
+            // Atualiza o ícone e salva a preferência
+            if (body.classList.contains('dark-theme')) {
+                this.innerHTML = '<i class="fas fa-sun"></i>'; // Ícone para tema claro
+                localStorage.setItem('theme', 'dark');
+            } else {
+                this.innerHTML = '<i class="fas fa-moon"></i>'; // Ícone para tema escuro
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    } else {
+        console.warn("Botão de alternância de tema (#themeToggle) não encontrado.");
+    }
+});
+
+// --- Script robusto para o botão de tema ---
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (themeToggle) {
+        // Verifica preferência salva ao carregar
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Ícone para voltar ao claro
+        } else {
+             // Padrão ou tema claro
+             themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Ícone para ir ao escuro
+        }
+
+        // Adiciona evento de clique
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+
+            if (body.classList.contains('dark-theme')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+    // Se não encontrar o botão, não faz nada, evitando erros.
+});
+// --- Fim do script do botão de tema ---
