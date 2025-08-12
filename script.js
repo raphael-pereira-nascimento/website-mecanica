@@ -18,13 +18,6 @@ function showToast(message, isError = false) {
     // Verificação de segurança para elementos do DOM
     if (!toast || !toastMessage) {
         console.error("Elementos do Toast (#toast, #toastMessage) não encontrados no DOM.");
-        // Fallback para alert se os elementos não existirem
-        // Remova este fallback se não quiser o alerta
-        // if (isError) {
-        //     alert("Erro: " + message);
-        // } else {
-        //     alert(message);
-        // }
         return; // Sai da função se os elementos não forem encontrados
     }
 
